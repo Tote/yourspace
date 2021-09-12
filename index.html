@@ -7,6 +7,7 @@
     <title>yourspace</title>
 </head>
 <body>
+    <h1>Stats</h1>
     <table>
         <thead>
             <th>Followers</th>
@@ -22,9 +23,35 @@
         </tbody>
     </table>
     <div>
-        <button id="textPost">Text Post</button>
-        <div id="activePosts">
+        <h1>New Post</h1>
+        <div id="postTypeBar">
+            <h2>Post type</h2>
+            <button id="typeText">Text</button>
+            <button id="typePhoto">Photo</button>
+            <button id="typeVideo">Video</button>
+            <button id="typeSong">Song</button>
+            <button id="typeLink">External Link</button>
+            <button id="typeStory">Story</button>
         </div>
+        <div id="postContentBar">
+            <h2>Post Content</h2>
+            <button id="contentAnimal">Animals</button>
+            <button id="contentFood">Food</button>
+            <button id="contentNews">News</button>
+            <button id="contentMemory">Memories</button>
+            <button id="contentOpinion">Opinion</button>
+            <button id="contentTravel">Travel</button>
+            <button id="contentDance">Dance</button>
+        </div>
+        <div>
+            Post a
+            <span id="currentPostType"></span>
+            about
+            <span id="currentPostContent"></span>
+            <button id="createPost">Post</button>
+        </div>
+    </div>
+    <div id="activePosts">
     </div>
 
     <script src="Dashboard.js"></script>
