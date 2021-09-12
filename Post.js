@@ -14,7 +14,7 @@ class Post{
         this.postElem.innerHTML = `
             Your ${this.type} about ${this.topic} is active
             <span>
-                ${this.likesCounter} likes
+                ${this.likesCounter.toLocaleString()} likes
             </span>
         `
     }

@@ -11,10 +11,15 @@ contentFood.onclick     = () => currentPostContent.textContent = 'food'
 contentNews.onclick     = () => currentPostContent.textContent = 'news'
 contentMemory.onclick   = () => currentPostContent.textContent = 'memories'
 contentOpinion.onclick  = () => currentPostContent.textContent = 'an opinion'
-contentTravel.onclick   = () => currentPostContent.textContent = 'travel'
+contentTravel.onclick   = () => currentPostContent.textContent = 'a place'
 contentDance.onclick    = () => currentPostContent.textContent = 'a dance'
 
 createPost.onclick = () => {
-    const post = new Post(currentPostType.textContent, currentPostContent.textContent)
-    distributeLikes(1000000,14,post.addLikes.bind(post))
+    const type = currentPostType.textContent
+    const content = currentPostContent.textContent
+    
+    const post = new Post(type, content)
+    const newLikes = Math.floor(dashboard.followers * (1+P_SHARE[type][content]) * P_LIKES[type][content])
+    
+    distributeLikes(newLikes,14,post.addLikes.bind(post))
 }
