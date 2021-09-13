@@ -19,7 +19,13 @@ createPost.onclick = () => {
     const content = currentPostContent.textContent
     
     const post = new Post(type, content)
-    const newLikes = Math.floor(dashboard.followers * (1+P_SHARE[type][content]) * P_LIKES[type][content])
+    const trendBoost = TRENDS_CURRENT
+                        .map( i => TRENDING_TOPICS[i])
+                        .filter( tt => tt['affects'].includes(`${type}/${content}` ))
+                        .map(tt => tt['boost'])
+                        .reduce( (a,b) => a*b, 1)
+                        ?? 1
+    const newLikes = Math.floor(dashboard.followers * (1+P_SHARE[type][content]) * P_LIKES[type][content] * trendBoost)
     
     distributeLikes(newLikes,14, likes => post.addLikes(likes), ()=> post.deactivate())
     

@@ -1,3 +1,4 @@
+const TREND_REFRESH_TIME = 60000
 const P_LIKES = {
     text    : {
         animals     : .2,
@@ -118,3 +119,43 @@ const SHORT_NUMBER_FORMAT = {
     minimumFractionDigits   : 1,
     maximumFractionDigits   : 2
   }
+
+const TRENDING_TOPICS = [
+    {title: 'Fake News',                            affects:['link/news']       , boost: -1},
+    {title:'Hurricane in South Quinteshire',        affects:['video/a place']     , boost:5},
+    {title:'A 7.5 Earthquake',                      affects:['text/a place']      , boost:7.5},
+    {title:'#PetSpace',                             affects:['photo/animals']    , boost:2},
+    {title:'#ClimateChange',                        affects:['text/an opinion']    , boost:2},
+    {title:'#EarthDay',                             affects:['text/an opinion']    , boost:2},
+    {title:'#ShowYourSpace',                        affects:['photo/a place']     , boost:2},
+    // {title:'#TheVenegasNewEpisode',                 affects:[]              , boost:1},
+    // {title:'#TheVenegasWilliamAgainstHilda',        affects:[]              , boost:1},
+    // {title:'#TheVenegasGoodbyeHilda',               affects:[]              , boost:1},
+    // {title:'#TheVenegasMonchoSavesTheDay',          affects:[]              , boost:1},
+    // {title:'#TheVenegasAreBack',                    affects:[]              , boost:1},
+    // {title:'#TheVenegasSeasonFinale',               affects:[]              , boost:1},
+    // {title:'#TheVenegasSeriesFinale',               affects:[]              , boost:1},
+    // {title:'WHITEGREEN Debut Album',                affects:[]              , boost:1},
+    // {title:'WHITEGREEN In Your Space',              affects:[]              , boost:1},
+    // {title:'WHITEGREEN feat. Chayanne',             affects:[]              , boost:1},
+    // {title:'WHITEGREEN feat. DuaLinga',             affects:[]              , boost:1},
+    // {title:'WHITEGREEN feat. Selenium Gomez',       affects:[]              , boost:1},
+    // {title:'WHITEGREEN feat. B-a-cardi',            affects:[]              , boost:1},
+    // {title:'WHITEGREEN feat. Miss Radio Gaga',      affects:[]              , boost:1},
+    // {title:'#WHITEGREENNewSong',                    affects:[]              , boost:1},
+    // {title:'#WHITEGREENTheConcert',                 affects:[]              , boost:1},
+    // {title:'#WHITEGREENPhotobook',                  affects:[]              , boost:1},
+    // {title:'#WHITEGREENComeback',                   affects:[]              , boost:1},
+    // {title:'Fairness Alliance Movie',               affects:[]              , boost:1},
+    // {title:'#FairnessAlliance',                     affects:[]              , boost:1},
+    // {title:'#FairnessAllianceOnTheaters',           affects:[]              , boost:1},
+    // {title:'Fairness Alliance Directors Cut',       affects:[]              , boost:1},
+    // {title:'Fairness Alliance: Batguy v Superguy',  affects:[]              , boost:1},
+    // {title:'Awesome Woman Movie',                   affects:[]              , boost:1},
+    // {title:'Awesome Woman is Back',                 affects:[]              , boost:1},
+    // {title:'Awesome Woman delayed',                 affects:[]              , boost:1},
+    // {title:'Awesome Woman 1984',                    affects:[]              , boost:1},
+    // {title:'Waterman',                              affects:[]              , boost:1},
+    // {title:'Fairness Alliance new movie',           affects:[]              , boost:1},
+    // {title:'#FairnessAllianceTheMusical',           affects:[]              , boost:1},
+]               

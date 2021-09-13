@@ -101,8 +101,8 @@ footer>*{
     border-radius: 5px;
 }
 #screenPost,
-#screenTrending,
-/*#screenFollowers,*/
+/*#screenTrending,*/
+#screenFollowers,
 #screenFeed{
     display: none;
 }
@@ -128,4 +128,15 @@ header::after{
 .statsBody>.indicator{
     font-size   : 1.3em;
     padding     : 10px;
+}
+
+.trend{
+    padding:15px;
+    border: solid 1px var(--color-ui-separator);
+    font-weight: bold;
+}
+
+.info{
+    font-size: .8em;
+    margin  : 10px 0;
 }
