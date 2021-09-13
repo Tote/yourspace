@@ -2,6 +2,7 @@ class Post{
     postElem
     likesElem
     likesCounter = 0
+    followersCounter = 0
     constructor(type, topic){
         this.type = type
         this.topic = topic 
@@ -16,14 +17,15 @@ class Post{
             <span>Your ${this.type} about ${this.topic}</span>
             <section class="action-bar">
                 <span>♡${shortNumber(this.likesCounter)}</span>
-                <span>☺0</span>
+                <span>☺${shortNumber(this.followersCounter)}</span>
             </section>
         </div>
         `
     }
 
-    addLikes(likes){
+    update(likes, followers){
         this.likesCounter += likes
+        this.followersCounter += followers
         this.render()
     }
 

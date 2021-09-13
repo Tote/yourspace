@@ -1,4 +1,5 @@
 const TREND_REFRESH_TIME = 60000
+const P_FOLLOW = .1
 const P_LIKES = {
     text    : {
         animals     : .2,
