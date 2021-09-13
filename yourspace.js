@@ -20,3 +20,7 @@ function distributeLikes(likes, seconds, callback){
 function gainFollowers(){
     dashboard.followers = Math.floor(dashboard.likes/10)
 }
+function toggleScreen(show, hide){
+    show.style.display = 'block'
+    hide.style.display = 'none'
+}

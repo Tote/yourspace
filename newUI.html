@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>yourSpace</title>
+</head>
+<body>
+    <header>
+        <h1>yourspace</h1>
+    </header>
+    <main>
+        <div id="screenPost">
+            <h2>New Post</h2>
+            <span></span>
+            <div class="postTypes">
+                <button id="typeText">🔤 Text</button>
+                <button id="typePhoto">🖼️ Photo</button>
+                <button id="typeVideo">🎬 Video</button>
+                <button id="typeSong">🎵 Song</button>
+                <button id="typeLink">🔗 Link</button>
+                <button id="typeStory">🤳 Story</button>
+            </div>
+            <div class="postTopics">
+                <div>What do you want to post about?</div>
+                <button id="contentAnimal">🐶 Animals</button>
+                <button id="contentFood">🍔 Food</button>
+                <button id="contentNews">📰 News</button>
+                <button id="contentMemory">📅 Memories</button>
+                <button id="contentOpinion">💭 Opinion</button>
+                <button id="contentTravel">🏖️ Place</button>
+                <button id="contentDance">💃 Dance</button>
+            </div>
+            <div class="postConfirmation">
+                <button id="createPost">Post a
+                    <span id="currentPostType"></span>
+                    about
+                    <span id="currentPostContent"></span></button>
+            </div>
+            <!--article class="post">
+                <h2>Your photo about animals</h2>
+                <p>this is a comment</p>
+                <section class="action-bar">
+                    <button>♡ Like</button>
+                    <button>✖ Hide</button>
+                    <button>🔄 Share</button>
+                </section>
+            </article-->
+
+        </div>
+        <div id="screenFeed">
+            <button class="btn--big" onclick="toggleScreen(screenPost, screenFeed)">New Post</button>
+            <div id="activePosts">
+            </div>
+        </div>
+        <div id="screenTrending">
+
+        </div>
+        
+    </main>
+    <footer class="action-bar">
+        <button>
+            <span class="icon">✏</span>
+            <span>Post</span>
+        </button>
+        <button>
+            <span class="icon">#⭎</span>
+            <span>Trending</span>
+        </button>
+        <button>
+            <span class="icon">☺</span>
+            <span>Followers</span>
+        </button>
+
+    </footer>
+    <script src="config.js"></script>
+    <script src="Dashboard.js"></script>
+    <script src="yourspace.js"></script>
+    <script src="Post.js"></script>
+    <script src="posts.js"></script>
+    <script src="gameScript.js"></script>
+</body>
+</html>
+

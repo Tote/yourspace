@@ -22,4 +22,6 @@ createPost.onclick = () => {
     const newLikes = Math.floor(dashboard.followers * (1+P_SHARE[type][content]) * P_LIKES[type][content])
     
     distributeLikes(newLikes,14,post.addLikes.bind(post))
+    
+    toggleScreen(screenFeed,screenPost)
 }
