@@ -25,6 +25,12 @@ function toggleScreen(show, hide){
     show.style.display = 'block'
     hide.style.display = 'none'
 }
+function showScreen(screen){
+    screenFeed.style.display = 'none'
+    screenTrending.style.display = 'none'
+    screenFollowers.style.display = 'none'
+    screen.style.display = 'block' 
+}
 function shortNumber(number){
     return number.toLocaleString(undefined,SHORT_NUMBER_FORMAT)
 }

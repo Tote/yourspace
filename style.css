@@ -100,7 +100,9 @@ footer>*{
     border: none;
     border-radius: 5px;
 }
-#screenPost{
+#screenPost,
+#screenTrending,
+#screenFollowers{
     display: none;
 }
 .indicator{
