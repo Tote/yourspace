@@ -10,9 +10,10 @@ class Dashboard{
     update(){
         const updateText = (e,v) => e.textContent = v
         updateText(count, this.followers.toLocaleString(undefined, SHORT_NUMBER_FORMAT))
+        updateText(countB, this.followers.toLocaleString(undefined, SHORT_NUMBER_FORMAT))
         // updateText(people, GOAL.toLocaleString(undefined, SHORT_NUMBER_FORMAT))
-        // updateText(progress,`${this.progress}%`)
-        // updateText(likes, this.likes.toLocaleString(undefined, SHORT_NUMBER_FORMAT))
+        updateText(progress,`${this.progress}%`)
+        updateText(likes, this.likes.toLocaleString(undefined, SHORT_NUMBER_FORMAT))
     }
 
     
