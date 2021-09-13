@@ -21,7 +21,7 @@ createPost.onclick = () => {
     const post = new Post(type, content)
     const newLikes = Math.floor(dashboard.followers * (1+P_SHARE[type][content]) * P_LIKES[type][content])
     
-    distributeLikes(newLikes,14,post.addLikes.bind(post))
+    distributeLikes(newLikes,14, likes => post.addLikes(likes), ()=> post.deactivate())
     
     toggleScreen(screenFeed,screenPost)
 }

@@ -12,10 +12,18 @@ class Post{
 
     render(){
         this.postElem.innerHTML = `
-            Your ${this.type} about ${this.topic} is active
-            <span>
-                ${this.likesCounter.toLocaleString()} likes
-            </span>
+        <div class="post">
+            <span>Your ${this.type} about ${this.topic}</span>
+            <section class="action-bar">
+                <span>♡${this.likesCounter.toLocaleString(undefined,{
+                    notation: "compact",
+                    compactDisplay: "short",
+                    minimumFractionDigits: 1,
+                    maximumFractionDigits: 2
+                  })}</span>
+                <span>☺0</span>
+            </section>
+        </div>
         `
     }
 
@@ -23,4 +31,10 @@ class Post{
         this.likesCounter += likes
         this.render()
     }
+
+    deactivate(){
+        inactivePosts.insertBefore(this.postElem, inactivePosts.firstChild)
+    }
+
+
 }

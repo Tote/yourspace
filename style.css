@@ -55,6 +55,9 @@ footer>*{
     padding:20px;
     border: solid 1px var(--color-ui-separator);
 }
+.post>.action-bar{
+    justify-content: flex-end;
+}
 .post>.action-bar>*{
     font-size: 1.5em;
 }
