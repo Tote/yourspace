@@ -111,3 +111,10 @@ const P_SHARE = {
         'a dance'   : 0.9,        
     },
 }
+
+const SHORT_NUMBER_FORMAT = {
+    notation                : "compact",
+    compactDisplay          : "short",
+    minimumFractionDigits   : 1,
+    maximumFractionDigits   : 2
+  }

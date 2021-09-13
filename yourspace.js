@@ -11,7 +11,6 @@ function distributeLikes(likes, seconds, callbackDuring, callbackFinish){
             let newLikes = likes * DISTRIBUTION[currentInterval++]
             dashboard.likes += newLikes
             callbackDuring(newLikes)
-            console.log(`+${newLikes} likes`)
         } else {
             clearInterval(loop)
             callbackFinish()
@@ -20,8 +19,12 @@ function distributeLikes(likes, seconds, callbackDuring, callbackFinish){
 }
 function gainFollowers(){
     dashboard.followers = Math.floor(dashboard.likes/10)
+    document.documentElement.style.setProperty('--progress', `${dashboard.progress}%`)
 }
 function toggleScreen(show, hide){
     show.style.display = 'block'
     hide.style.display = 'none'
+}
+function shortNumber(number){
+    return number.toLocaleString(undefined,SHORT_NUMBER_FORMAT)
 }

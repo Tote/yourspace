@@ -2,6 +2,7 @@
     --color-main-background : #04349a;
     --color-main-foreground : white;
     --color-ui-separator    : #ccc;
+    --progress              : 50%;
 }
 body{
     display         : flex;
@@ -20,6 +21,10 @@ header{
     height      : 100px;
     padding     : 10px 20px;
     box-sizing  : border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 main{
     flex-grow: 1;
@@ -97,4 +102,22 @@ footer>*{
 }
 #screenPost{
     display: none;
+}
+.indicator{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.indicator>.number{
+    font-size: 1.3em;
+}
+header::after{
+    content :' ';
+    background: var(--color-main-background);
+    filter:brightness(50%) opacity(.5);
+    
+    position: absolute;
+    left    : 0px;
+    height  : 100px;
+    width   : var(--progress);
 }
