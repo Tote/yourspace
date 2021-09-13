@@ -15,12 +15,7 @@ class Post{
         <div class="post">
             <span>Your ${this.type} about ${this.topic}</span>
             <section class="action-bar">
-                <span>♡${this.likesCounter.toLocaleString(undefined,{
-                    notation: "compact",
-                    compactDisplay: "short",
-                    minimumFractionDigits: 1,
-                    maximumFractionDigits: 2
-                  })}</span>
+                <span>♡${shortNumber(this.likesCounter)}</span>
                 <span>☺0</span>
             </section>
         </div>
